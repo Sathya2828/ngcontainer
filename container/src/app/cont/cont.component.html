@@ -1,0 +1,22 @@
+<!-- ngcontent -->
+<div class="title">Child Comdivonent</div>
+<ng-content select="[channelName]"></ng-content>
+<div> Check Selector in NgContent This is the Channel for web Developer</div>
+<ng-content select=".desc"></ng-content>
+<hr>
+
+<!-- ngcontainer -->
+<div *ngFor="let number of numbers">
+  <!-- <span *ngIf="number%2===0">  {{number}}</span> -->
+  <ng-container *ngIf="number%2===0">  {{number}}</ng-container>
+</div>
+<hr>
+
+ 
+<!-- ngtemplate -->
+<ng-template [ngIf]="true">This is a content inside ng-template</ng-template>
+<br>
+<div *ngIf="false  else  elseBlock">Condition is true</div>
+<ng-template #elseBlock>
+    <div>Condition is False </div>
+</ng-template>
